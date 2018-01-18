@@ -14,11 +14,17 @@ Note that this will require the Person object to be converted to
 ```
 const char * 
 ```
-for rendering.
+for rendering. The std::string class provides a method 
+```
+c_str()
+```
+to convert the string into this type.
 
-Define a class to represent a course.
-
-Define two subclasses, Student and Teacher. Override the const char *() conversion function to reflect the different "roles".
+Define two subclasses, Student and Teacher. Override the 
+```
+const char *() 
+```
+conversion function to include the appropriate "role".
 
 Add an abstract metbod to the Person class called "doIt()", override this in the Student class to model a student learning on a course, 
 and in the Teacher to model the teacher teaching the course.
@@ -28,7 +34,11 @@ and the others are students for the course.
 
 Add an appropriate number of Teacher(s) and Student(s) to the classroom. 
 
-Add a method showPeople(), which processes each person in the classroom by calling the doIt() method. 
+Add a method 
+```
+showPeople()
+```
+to the Classroom, which processes each person in the classroom by calling the doIt() method. 
 Check that the correct number of teachers and students are reported.
 
 Does your model and implementation support the idea of a person being both a student and a teacher?
